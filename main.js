@@ -3,7 +3,7 @@ var link = "https://datacenter.taichung.gov.tw/Swagger/OpenData/2072c001-c06e-42
 const getData = {
     data() {
         return {
-
+            datas: ""
         }
     },
     mounted() {
@@ -17,6 +17,7 @@ const getData = {
         xhr.onload = () => {
             var json = xhr.responseText;
             var obj = JSON.parse(json);
+            this.datas =obj;
 
             console.log(obj);
         }
